@@ -1,0 +1,27 @@
+-- ======================================================================
+-- PRIMUS CAPITAL POC — Cleanup
+-- Elimina todos los objetos creados durante la POC.
+-- CUIDADO: Esto es irreversible.
+
+USE ROLE ACCOUNTADMIN;
+
+-- Suspender tasks antes de dropear
+ALTER TASK IF EXISTS PRIMUS_POC.DWH.TASK_ETL_ROOT SUSPEND;
+ALTER TASK IF EXISTS PRIMUS_POC.DWH.TASK_RESUMEN_ACTIVIDAD SUSPEND;
+ALTER TASK IF EXISTS PRIMUS_POC.DWH.TASK_TOP_CLIENTES SUSPEND;
+ALTER TASK IF EXISTS PRIMUS_POC.DWH.TASK_METRICAS_PRODUCTOS SUSPEND;
+ALTER TASK IF EXISTS PRIMUS_POC.RAW.TASK_LOAD_MOVIMIENTOS SUSPEND;
+
+-- Dropear database (incluye todo: schemas, tablas, views, procedures, tasks, streams)
+DROP DATABASE IF EXISTS PRIMUS_POC;
+
+-- Dropear warehouses
+DROP WAREHOUSE IF EXISTS PRIMUS_ETL_WH;
+DROP WAREHOUSE IF EXISTS PRIMUS_ANALYTICS_WH;
+
+-- Dropear roles
+DROP ROLE IF EXISTS PRIMUS_ETL_ROLE;
+DROP ROLE IF EXISTS PRIMUS_ANALYST_ROLE;
+DROP ROLE IF EXISTS PRIMUS_COMPLIANCE_ROLE;
+
+SELECT 'Cleanup completo: todos los objetos de la POC eliminados' AS status;

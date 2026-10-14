@@ -43,6 +43,24 @@ const features = [
     link: '/tutorial/devops',
     icon: '6',
   },
+  {
+    title: 'AWS PrivateLink',
+    description: 'Conectividad privada entre tu VPC y Snowflake. Zero internet publico. Business Critical.',
+    link: '/tutorial/privatelink',
+    icon: '7',
+  },
+  {
+    title: 'Openflow BYOC',
+    description: 'Openflow desplegado en tu propia cuenta AWS. Control total del networking.',
+    link: '/tutorial/openflow-byoc',
+    icon: '8',
+  },
+  {
+    title: 'Openflow Kafka',
+    description: 'Ingesta real-time desde Kafka con schema evolution y error handling nativo.',
+    link: '/tutorial/openflow-kafka',
+    icon: '9',
+  },
 ];
 
 function HomepageHeader() {
@@ -63,7 +81,7 @@ function HomepageHeader() {
           <Stat value="50M+" label="filas de datos" />
           <Stat value="96%" label="menos scanning" />
           <Stat value="8h a 2h" label="ETL reducido" />
-          <Stat value="6" label="modulos" />
+          <Stat value="9" label="modulos" />
         </div>
       </div>
     </header>

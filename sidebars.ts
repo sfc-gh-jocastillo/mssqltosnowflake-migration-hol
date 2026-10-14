@@ -25,6 +25,16 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Networking y Seguridad',
+      items: ['privatelink'],
+    },
+    {
+      type: 'category',
+      label: 'Integracion de datos',
+      items: ['openflow-byoc', 'openflow-kafka'],
+    },
+    {
+      type: 'category',
       label: 'Operaciones',
       items: ['devops'],
     },

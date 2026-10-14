@@ -23,6 +23,9 @@ Data engineers con experiencia en plataformas de datos y herramientas de ETL/pip
 | [Clustering](clustering) | Reduccion de scanning de 260 TB a 10 TB |
 | [Compliance](compliance) | Pseudonimizacion + masking por rol |
 | [Data Quality](data-quality) | DMFs, tags, clasificacion PII |
+| [AWS PrivateLink](privatelink) | Conectividad privada Business Critical |
+| [Openflow BYOC](openflow-byoc) | Deploy Openflow en tu VPC AWS |
+| [Openflow Kafka](openflow-kafka) | Ingesta real-time desde Kafka |
 | [DevOps](devops) | Multi-env, CI/CD, rollback con Time Travel |
 
 ## Requisitos
